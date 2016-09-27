@@ -58,6 +58,7 @@ bool Adafruit_BMP280::begin(uint8_t a) {
     }
   }
 
+  Serial.println(read8(BMP280_REGISTER_CHIPID));
   if (read8(BMP280_REGISTER_CHIPID) != 0x58)
     return false;
 
